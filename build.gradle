@@ -11,6 +11,10 @@ buildscript {
     }
 }
 
+ext {
+    adminVersion = '0.0.1'
+}
+
 version projectVersion
 group "org.graceframework.guides"
 
@@ -62,7 +66,7 @@ dependencies {
     implementation "org.graceframework:grace-plugin-url-mappings"
     implementation "org.graceframework.plugins:cache"
     implementation "org.graceframework.plugins:async"
-    implementation "org.graceframework.plugins:admin:0.0.1-SNAPSHOT"
+    implementation "org.graceframework.plugins:admin:$adminVersion"
     implementation "org.graceframework.plugins:scaffolding"
     implementation "org.graceframework.plugins:fields"
     implementation "org.graceframework.plugins:events"
