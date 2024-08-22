@@ -30,7 +30,7 @@ Grace Blog Admin Console.
         // TODO Implement registering dynamic methods to classes (optional)
     }
 
-    void doWithDynamicModules() {
+    Closure doWithDynamicModules() { {->
         // TODO Implement registering dynamic modules to application (optional)
         webSection(key: "admin.tabs.blog", name: "Blog Tab", location: "admin.navigation.bar", i18nNameKey: "admin.menu.section.blog.name", descriptionKey: "admin.menu.section.blog.desc", weight: 20)
 
@@ -44,6 +44,6 @@ Grace Blog Admin Console.
                     // label(key: "admin.menu.item.createpost.label")
                     link(linkId: "post_create", url: [namespace: 'admin', controller: 'post', action: 'create'])
                 }
-    }
+    }}
 
 }

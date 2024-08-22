@@ -9,7 +9,8 @@ plugins {
 }
 
 ext {
-    adminVersion = '0.2.0'
+    adminVersion = '1.0.0-M1'
+    dynamicModulesVersion = '1.0.0-M1'
 }
 
 version projectVersion
@@ -41,7 +42,6 @@ dependencies {
     implementation "org.graceframework:grace-plugin-databinding"
     implementation "org.graceframework:grace-plugin-datasource"
     implementation "org.graceframework:grace-plugin-domain-class"
-    implementation "org.graceframework:grace-plugin-dynamic-modules"
     implementation "org.graceframework:grace-plugin-i18n"
     implementation "org.graceframework:grace-plugin-interceptors"
     implementation "org.graceframework:grace-plugin-management"
@@ -49,6 +49,7 @@ dependencies {
     implementation "org.graceframework:grace-plugin-services"
     implementation "org.graceframework:grace-plugin-url-mappings"
     implementation "org.graceframework.plugins:async"
+    implementation "org.graceframework.plugins:dynamic-modules:$dynamicModulesVersion"
     implementation "org.graceframework.plugins:admin:$adminVersion"
     implementation "org.graceframework.plugins:cache"
     implementation "org.graceframework.plugins:database-migration"
