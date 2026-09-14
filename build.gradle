@@ -9,7 +9,7 @@ plugins {
 }
 
 ext {
-    adminVersion = '1.0.0-M1'
+    adminVersion = '1.0.0'
     dynamicModulesVersion = '1.0.0'
 }
 
