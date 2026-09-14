@@ -6,7 +6,7 @@ import grails.util.Environment
 class BlogAdminGrailsPlugin extends DynamicPlugin {
 
     // the version or versions of Grails the plugin is designed for
-    def grailsVersion = "2022.1.0 > *"
+    def grailsVersion = "2023.0.0 > *"
     def version = "1.0"
     // resources that are excluded from plugin packaging
     def pluginExcludes = [
