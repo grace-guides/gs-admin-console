@@ -11,12 +11,12 @@
     <div id="content" role="main">
         <div class="container">
             <section class="row">
-                <a href="#list-post" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+                <a href="#list-post" class="skip" tabindex="-1"><g:message code="default.link.skip.label" /></a>
                 <div class="col-12" role="navigation">
                     <ul class="nav nav-pills">
                         <li class="nav-item">
                             <a class="nav-link" href="${createLink(uri: '/')}">
-                                <i class="bi bi-house-fill"></i><g:message code="default.home.label"/>
+                                <i class="bi bi-house-fill"></i><g:message code="default.home.label" />
                             </a>
                         </li>
                         <li class="nav-item">
@@ -36,9 +36,9 @@
                     <f:table collection="${postList}" />
 
                     <g:if test="${postCount > params.int('max')}">
-                    <nav aria-label="Page navigation">
-                        <bs:paginate total="${postCount ?: 0}" useIcons="true" align="center" />
-                    </nav>
+                    <div class="pagination justify-content-center">
+                        <g:paginate total="${postCount ?: 0}" />
+                    </div>
                     </g:if>
                 </div>
             </section>

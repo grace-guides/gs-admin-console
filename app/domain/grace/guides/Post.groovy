@@ -7,4 +7,5 @@ class Post {
 
     static constraints = {
     }
+
 }

@@ -11,8 +11,9 @@ class PostSpec extends Specification implements DomainUnitTest<Post> {
     def cleanup() {
     }
 
-    void "test something"() {
-        expect:"fix me"
+    void 'test something'() {
+        expect: 'fix me'
             true == false
     }
+
 }

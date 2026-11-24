@@ -1,5 +1,7 @@
 package grace.guides
 
+import grails.plugins.descriptors.WebItemModuleDescriptor
+import grails.plugins.descriptors.WebSectionModuleDescriptor
 import grails.plugins.*
 import grails.util.Environment
 
@@ -20,6 +22,11 @@ class BlogAdminGrailsPlugin extends DynamicPlugin {
 Grace Blog Admin Console.
 '''
     def profiles = ['web']
+
+    def providedModules = [
+            WebItemModuleDescriptor,
+            WebSectionModuleDescriptor
+    ]
 
     Closure doWithSpring() { {->
             // TODO Implement runtime spring config (optional)

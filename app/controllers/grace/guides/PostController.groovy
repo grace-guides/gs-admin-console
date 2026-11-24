@@ -1,14 +1,14 @@
 package grace.guides
 
 import grails.validation.ValidationException
+
 import static org.springframework.http.HttpStatus.*
 
 class PostController {
-    static namespace = 'admin'
 
     PostService postService
 
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+    static allowedMethods = [save: 'POST', update: 'PUT', delete: 'DELETE']
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
@@ -32,7 +32,7 @@ class PostController {
         try {
             postService.save(post)
         } catch (ValidationException e) {
-            respond post.errors, view:'create'
+            respond post.errors, view: 'create'
             return
         }
 
@@ -58,7 +58,7 @@ class PostController {
         try {
             postService.save(post)
         } catch (ValidationException e) {
-            respond post.errors, view:'edit'
+            respond post.errors, view: 'edit'
             return
         }
 
@@ -82,7 +82,7 @@ class PostController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.deleted.message', args: [message(code: 'post.label', default: 'Post'), id])
-                redirect action:"index", method:"GET"
+                redirect action: 'index', method: 'GET'
             }
             '*'{ render status: NO_CONTENT }
         }
@@ -92,9 +92,10 @@ class PostController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.not.found.message', args: [message(code: 'post.label', default: 'Post'), params.id])
-                redirect action: "index", method: "GET"
+                redirect action: 'index', method: 'GET'
             }
             '*'{ render status: NOT_FOUND }
         }
     }
+
 }
