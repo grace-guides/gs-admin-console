@@ -128,7 +128,7 @@
 <div id="spinner" class="spinner" style="display:none;">
     <div class="d-flex justify-content-center">
         <div class="spinner-border text-primary" role="status">
-            <span class="sr-only">Loading...</span>
+            <span class="visually-hidden">Loading...</span>
         </div>
     </div>
 </div>

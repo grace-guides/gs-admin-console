@@ -6,10 +6,6 @@ plugins {
     id "org.graceframework.grace-gsp"
 }
 
-ext {
-    adminVersion = '1.0.0'
-}
-
 group = "grace.guides"
 
 repositories {
@@ -32,6 +28,7 @@ dependencies {
     implementation "org.graceframework:grace-boot-plugin"
     implementation "org.graceframework:grace-boot-validation"
     implementation "org.graceframework:grace-boot-web"
+    implementation "org.graceframework:grace-plugin-admin"
     implementation "org.graceframework:grace-plugin-database-migration"
     implementation "org.graceframework:grace-plugin-dynamic-modules"
     implementation "org.graceframework:grace-plugin-fields"
@@ -39,7 +36,6 @@ dependencies {
     implementation "org.graceframework:grace-plugin-scaffolding"
     implementation "org.graceframework:grace-plugin-services"
     implementation "org.graceframework:grace-plugin-taglibs"
-    implementation "org.graceframework.plugins:admin:$adminVersion"
     profile "org.graceframework.profiles:web"
     runtimeOnly "com.h2database:h2"
     runtimeOnly "org.graceframework.plugins:asset-pipeline-plugin"

@@ -1,7 +1,8 @@
 package grace.guides
 
-import grails.testing.gorm.DomainUnitTest
 import spock.lang.Specification
+
+import grails.testing.gorm.DomainUnitTest
 
 class PostSpec extends Specification implements DomainUnitTest<Post> {
 
@@ -13,7 +14,7 @@ class PostSpec extends Specification implements DomainUnitTest<Post> {
 
     void 'test something'() {
         expect: 'fix me'
-            true == false
+        true == false
     }
 
 }

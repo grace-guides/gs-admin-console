@@ -67,7 +67,7 @@ class PostController {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'post.label', default: 'Post'), post.id])
                 redirect post
             }
-            '*'{ respond post, [status: OK] }
+            '*' { respond post, [status: OK] }
         }
     }
 
@@ -84,7 +84,7 @@ class PostController {
                 flash.message = message(code: 'default.deleted.message', args: [message(code: 'post.label', default: 'Post'), id])
                 redirect action: 'index', method: 'GET'
             }
-            '*'{ render status: NO_CONTENT }
+            '*' { render status: NO_CONTENT }
         }
     }
 
@@ -94,7 +94,7 @@ class PostController {
                 flash.message = message(code: 'default.not.found.message', args: [message(code: 'post.label', default: 'Post'), params.id])
                 redirect action: 'index', method: 'GET'
             }
-            '*'{ render status: NOT_FOUND }
+            '*' { render status: NOT_FOUND }
         }
     }
 

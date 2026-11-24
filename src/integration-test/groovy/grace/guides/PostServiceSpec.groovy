@@ -15,13 +15,13 @@ class PostServiceSpec extends Specification {
 
     private Long setupData() {
         // TODO: Populate valid domain instances and return a valid ID
-        //new Post(...).save(flush: true, failOnError: true)
-        //new Post(...).save(flush: true, failOnError: true)
-        //Post post = new Post(...).save(flush: true, failOnError: true)
-        //new Post(...).save(flush: true, failOnError: true)
-        //new Post(...).save(flush: true, failOnError: true)
+        // new Post(...).save(flush: true, failOnError: true)
+        // new Post(...).save(flush: true, failOnError: true)
+        // Post post = new Post(...).save(flush: true, failOnError: true)
+        // new Post(...).save(flush: true, failOnError: true)
+        // new Post(...).save(flush: true, failOnError: true)
         assert false, 'TODO: Provide a setupData() implementation for this generated test suite'
-        //post.id
+        // post.id
     }
 
     void 'test get'() {
